@@ -1,5 +1,6 @@
 import sunny from '../images/sunny.png'
 import { useState } from 'react'
+import { getWeatherInfo } from '../utils/weatherCode'
 import "./WeatherApp.css"
 
 const WeatherApp = () => {
@@ -20,6 +21,8 @@ const search = (city) => {
     console.log('Searching for:', city)
 }
 
+const [data, setData] = useState(null)
+
   return (
     <div className="container">
       <div className="weather-app">
@@ -37,7 +40,7 @@ const search = (city) => {
                 onChange={handleInputChanges}
                 onKeyDown={handleKeyDown}
             />
-            
+
             <i
             className="fa-solid fa-magnifying-glass"
             onClick={() => search(location)}
