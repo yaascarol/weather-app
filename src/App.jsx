@@ -1,9 +1,10 @@
+import WeatherApp from "./assets/components/WeatherApp"
+
 function App() {
 
   return (
-    <>
-      Hello world!
-    </>
+    <WeatherApp />
+
   )
 }
 

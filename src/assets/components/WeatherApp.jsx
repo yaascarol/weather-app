@@ -1,6 +1,6 @@
-import sunny from '../assets/images/sunny.png'
+import sunny from '../images/sunny.png'
 
-const WheatherApp = () => {
+const WeatherApp = () => {
   return (
     <div className="container">
       <div className="weather-app">
@@ -47,4 +47,4 @@ const WheatherApp = () => {
   )
 }
 
-export default WheatherApp
+export default WeatherApp
