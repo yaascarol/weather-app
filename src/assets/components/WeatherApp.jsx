@@ -1,6 +1,21 @@
 import sunny from '../images/sunny.png'
+import { useState } from 'react'
+import "./WeatherApp.css"
 
 const WeatherApp = () => {
+
+    const [location, setLocation] = useState('')
+    const handleInputChanges = (e) => {
+    setLocation(e.target.value)
+    console.log(location)
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      search(location)
+    }
+  }
+
   return (
     <div className="container">
       <div className="weather-app">
@@ -12,10 +27,12 @@ const WeatherApp = () => {
 
           <div className="search-bar">
             <input
-              type="text"
-              placeholder="Enter Location"
+                type="text"
+                placeholder="Enter Location"
+                value={location}
+                onChange={handleInputChanges}
+                onKeyDown={handleKeyDown}
             />
-            <i className="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
 

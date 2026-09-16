@@ -1,10 +1,11 @@
-import WeatherApp from "./assets/components/WeatherApp"
+import WheatherApp from './assets/components/WeatherApp'
+import './assets/components/WeatherApp.css'
 
-function App() {
-
+const App = () => {
   return (
-    <WeatherApp />
-
+    <div>
+      <WheatherApp />
+    </div>
   )
 }
 
