@@ -10,11 +10,15 @@ const WeatherApp = () => {
     console.log(location)
   }
 
-  const handleKeyDown = (e) => {
+const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       search(location)
     }
-  }
+}
+
+const search = (city) => {
+    console.log('Searching for:', city)
+}
 
   return (
     <div className="container">
@@ -33,6 +37,12 @@ const WeatherApp = () => {
                 onChange={handleInputChanges}
                 onKeyDown={handleKeyDown}
             />
+            
+            <i
+            className="fa-solid fa-magnifying-glass"
+            onClick={() => search(location)}
+            ></i>
+
           </div>
         </div>
 
