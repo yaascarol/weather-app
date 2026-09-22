@@ -5,6 +5,11 @@ import snowy from '../images/snowy.png'
 import { useState } from 'react'
 import { formatDate } from '../utils/formatDate'
 import { getWeatherInfo } from '../utils/weatherCode'
+import {
+  getCoordinates,
+  getCurrentWeather
+} from '../services/weatherApi'
+
 import "./WeatherApp.css"
 
 const WeatherApp = () => {
