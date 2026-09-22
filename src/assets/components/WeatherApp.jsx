@@ -3,6 +3,7 @@ import cloudy from '../images/cloudy.png'
 import rainy from '../images/rainy.png'
 import snowy from '../images/snowy.png'
 import { useState } from 'react'
+import { formatDate } from '../utils/formatDate'
 import { getWeatherInfo } from '../utils/weatherCode'
 import "./WeatherApp.css"
 
@@ -125,20 +126,6 @@ const getWeather = async (latitude, longitude) => {
 
 
   return result.current
-}
-
-const formatDate = (dateTime) => {
-  if (!dateTime) {
-    return ''
-  }
-
-  const date = new Date(dateTime)
-
-  return new Intl.DateTimeFormat('pt-BR', {
-    weekday: 'short',
-    day: '2-digit',
-    month: 'short'
-  }).format(date)
 }
 
 
